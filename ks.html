@@ -101,15 +101,30 @@
 		box-shadow:6px 8px 6px 6px rgba(0, 0, 0, 0.5);
 		border-radius:10px;
 	}
-	h1{
-	 background-image: url:(https://pic.baike.soso.com/p/20131030/20131030160338-559117572.jpg);
-	border-style:dashed;
-	}
+	.footer {
+     position: fixed;
+     bottom: 0;
+     width: 100%;
+     background-color: #f0f0f0;
+     text-align: center;
+     padding: 10px;
+   }
+	    #imgbox img{
+				width: 80px;
+				height:120px;
+				margin-left:60px;
+			}
     </style>
 </head>
 
 <body>
-<h1>江西科技师范大学</h1>
+<section>
+			<div id="imgbox"></div>
+		</section>
+    </div>
+<div class="footer">
+    江西科技师范大学-21计科一班-黄文胜 张紫阳 叶凯 张文宇 温链链
+   </div>
     <div id="currentTime"></div>
     <div id="logo"></div>
     <div class="border" id="stage">
@@ -167,6 +182,20 @@
     Model.UI.audioDom.getURL = function () {
         return mediaData.audioPath + mediaData.audioFiles[Model.i].filename;
     }
+var html="";
+        var imgdata=[ {id:1,url:"E:/photo/李健宏.jpg"},
+	        {id:1,url:"E:/photo/叶凯.jpg"},
+	        {id:2,url:"E:/photo/张紫阳.jpg"},
+	        {id:3,url:"E:/photo/黄文胜.jpg"},
+			{id:3,url:"E:/photo/张文宇.jpg"},
+			{id:3,url:"E:/photo/温链链.jpg"},
+        ];
+        for(var i=0,len=imgdata.length;i<len;i++)
+        {
+            html+='<img src="'+imgdata[i]['url']+'"/>';
+        }
+     
+	document.getElementById("imgbox").innerHTML=html;
 
       // 第七次作业更新任务1— — — —全屏播放视频
     // 1.1定义windowsWidth,将文档浏览器的宽度赋值给它
