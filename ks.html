@@ -162,7 +162,7 @@
     Model.UI.audioDom.audioLength = mediaData.audioFiles.length;
 
     Model.UI.videoDom.getURL = function () {
-        return mediaData.videoPath + mediaData.videoFiles[Model.i];
+        return mediaData.videoPath + mediaData.videoFiles[Model.i]+".mp4";
     }
     Model.UI.audioDom.getURL = function () {
         return mediaData.audioPath + mediaData.audioFiles[Model.i].filename;
